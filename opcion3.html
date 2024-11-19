@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Git</title>
+    <link rel="shortcut icon" href="../imgs/logo taaps.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.0/js/dataTables.fixedHeader.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Fondo blanco para buen contraste */
+            color: #000000; /* Texto negro para buen contraste */
+        }
+
+        .boton {
+            background-color: #0056b3; /* Azul oscuro */
+            color: #ffffff; /* Texto blanco */
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .boton:hover {
+            background-color: #004494; /* Color más oscuro para hover */
+        }
+        .contenedor-general {
+            display: flex;
+            width: 100%;
+            transition: margin-left 0.3s ease;
+        }
+    
+        .barra-navegacion {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            width: 15%;
+            height: 100%;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+    
+        .barra-navegacion.hidden {
+            transform: translateX(-100%);
+        }
+    
+        .contenido {
+            margin-left: 15%; /* Ajusta para alinearse con .barra-navegacion */
+            width: 85%;
+            padding: 50px;
+            transition: margin-left 0.3s ease;
+        }
+    
+        .contenido.full-width {
+            margin-left: 0;
+            width: 100%;
+        }
+    
+        #toggle-nav {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+    
+        /* Media queries para mejorar la respuesta en dispositivos más pequeños */
+        @media (max-width: 768px) {
+    .barra-navegacion {
+        width: 100%;
+        min-height: 100vh; /* Asegura que ocupe todo el alto */
+        position: relative;
+        overflow-y: auto; /* Mantén esto si necesitas desplazamiento, o cámbialo a hidden si no */
+    }
+
+    .contenido {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+a:hover img {
+            transform: scale(1.4);
+        }
+    </style>
+     <!-- Open Graph Tags -->
+     <meta property="og:title" content="titulo generico">
+     <meta property="og:description" content="Descripción de esta pagina we.">
+     <meta property="og:image" content="https://www.example.com/imagen.jpg"> <!-- URL de la imagen que aparecerá al compartir -->
+     <meta property="og:url" content="https://www.example.com"> <!-- URL de tu página -->
+     <meta property="og:type" content="website"> <!-- Tipo de contenido: puede ser "website", "article", etc. -->
+</head>
+<body>
+    <div>
+        <button id="toggle-nav" ><img src="menu.png" alt="Icono m" style="width: 35px; height: 25px;"></button>
+        </div>
+    <header role="banner">
+
+    </header>
+    
+    <div class="contenedor-general">
+        <div class="barra-navegacion">
+            <div>
+                <br>
+                <br>
+                <h4>Accesos:</h4>
+    <a href="inicio.html" style="text-decoration: none; color: inherit;">
+    <img src="logo taaps.png" alt="Icono 1" style="width: 45px; height: 45px; transition: transform 0.3s ease;">
+    Regresar
+    </a>
+    <hr>
+    <!-----------------------NUEVOS ACCESOS---------------------------------------------------------------->
+    <a href="opcion2.html" style="text-decoration: none; color: inherit;">
+    <img src="logo taaps.png" alt="Icono 1" style="width: 45px; height: 45px; transition: transform 0.3s ease;">
+    opcion 2
+    </a>
+    </div>
+    </div>
+    <div class="contenido">
+    <main role="main" aria-label="Contenido principal">
+        <section id="inicio">
+            <h2>Otros Datos</h2>
+        </section>
+
+        <section id="acerca-de">
+            <h2>Acerca de</h2>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original..</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form aria-label="Formulario de contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" aria-label="Campo para ingresar su nombre">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-label="Campo para ingresar su correo electrónico">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+</div>
+    <script>
+        $(document).ready(function() {
+            $('#toggle-nav').on('click', function() {
+                $('.barra-navegacion').toggleClass('hidden');
+                $('.contenido').toggleClass('full-width');
+            });
+        });
+        </script>
+        <br>
+</body>
+</html>
